@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div id ="video-grid">
+    
+</div>
+
+
+
+<script>
+    const ROOM_ID = "@Model.RoomId.ToString()";
+</script>
+
+<script src="~/lib/peerjs/dist/peerjs.min.js" defer></script>
+<script src="~/lib/signalr/dist/browser/signalr.js" defer></script>
+<script src="~/js/webrtcTest.js" defer></script>

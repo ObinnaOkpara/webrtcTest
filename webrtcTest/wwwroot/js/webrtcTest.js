@@ -17,7 +17,9 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/testhub").build();
 
 connection.on("userconnected", function (userid) {
     console.log("user connected : " + userid);
-    connectToNewUser(userid, myStream);
+
+    setTimeout(function () { connectToNewUser(userid, myStream); }, 5000);
+    
 });
 
 connection.on("userdisconnected", function (userid) {
@@ -120,6 +122,10 @@ function connectToNewUser(userid, stream) {
         console.log("Stream closed");
         uVideo.remove();
     });
+
+    if (!peers[userid]) {
+        peers[userid] = {}
+    }
 
     peers[userid].call = call;
 }

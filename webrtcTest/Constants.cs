@@ -26,7 +26,9 @@ namespace webrtcTest
 
     public class UserObj
     {
+        public string ConnId { get; set; }
         public string UserId { get; set; }
         public string Room { get; set; }
+        public string webrtcData { get; set; }
     }
 }

@@ -4,6 +4,22 @@
     ViewData["Title"] = "Home page";
 }
 
+<label>Your Label</label> <br/>
+<textarea id="yourid"></textarea>
+<label>Other Label</label> <br/>
+<textarea id="otherid"></textarea>
+
+<button id="connect">connect</button>
+
+
+<div class="mt-5">
+    <label>Enter message:</label> <br/>
+    <textarea id="yourmessage"></textarea>
+    <button id="send">Send</button>
+
+    <pre id="messages"></pre>
+</div>
+
 <div id ="video-grid">
     
 </div>
@@ -14,6 +30,9 @@
     const ROOM_ID = "@Model.RoomId.ToString()";
 </script>
 
-<script src="~/lib/peerjs/dist/peerjs.min.js" defer></script>
+@*<script src="~/lib/peerjs/dist/peerjs.min.js" defer></script>*@
+<script src="~/lib/simple-peer/simplepeer.min.js" defer></script>
 <script src="~/lib/signalr/dist/browser/signalr.js" defer></script>
-<script src="~/js/webrtcTest.js" defer></script>
+@*<script src="~/js/webrtc2.js" defer></script>*@
+
+<script src="~/js/webrtc.js" defer></script>
